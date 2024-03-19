@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
   const location = useLocation();
-  const [path, setPath] = useState(location.pathname);
+  const [, setPath] = useState(location.pathname);
   const destinationRef = [
     React.useRef(null),
     React.useRef(null),
