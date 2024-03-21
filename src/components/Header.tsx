@@ -1,33 +1,45 @@
-import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <>
-      <div>
-        <nav className="bg-gray-800 p-4 fixed top-0 w-[100vw] h-20">
-          <div className="flex justify-between items-center">
-            <div className="text-white font-bold">Logo</div>
-            <div>
-              <Link to="/">
-                <Button>Home</Button>
-              </Link>
-              <Link to="/Approach">
-                <Button>Approach</Button>
-              </Link>
-              <Link to="/Implementation">
-                <Button>Implementation</Button>
-              </Link>
-              <Link to="/Research">
-                <Button>Research</Button>
-              </Link>
-              <Link to="/About">
-                <Button>About</Button>
-              </Link>
-            </div>
-          </div>
-        </nav>
+    <nav className="bg-gray-800 p-4 fixed top-0 w-full">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link to="/" className="text-white font-bold text-xl">
+          Logo
+        </Link>
+        <div className="flex items-center space-x-4">
+          <Link
+            to="/"
+            className="text-white hover:text-gray-300 transition-colors duration-300"
+          >
+            Home
+          </Link>
+          <Link
+            to="/Approach"
+            className="text-white hover:text-gray-300 transition-colors duration-300"
+          >
+            Approach
+          </Link>
+          <Link
+            to="/Implementation"
+            className="text-white hover:text-gray-300 transition-colors duration-300"
+          >
+            Implementation
+          </Link>
+          <Link
+            to="/Research"
+            className="text-white hover:text-gray-300 transition-colors duration-300"
+          >
+            Research
+          </Link>
+          <Link
+            to="/About"
+            className="text-white hover:text-gray-300 transition-colors duration-300"
+          >
+            About
+          </Link>
+        </div>
       </div>
-    </>
+    </nav>
   );
 };
 
